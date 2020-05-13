@@ -1,0 +1,2 @@
+command01 to create a grocery ist: npm init -y
+command01 to install nodemon: npm install nodemon (after install nodemon we can use the following command line node mon <app.js>

@@ -1,0 +1,33 @@
+git init // starting a new depository
+git clone https://github.com/jsoliv/javascript.git   //cloning repository
+git status // checking whether the repository has been updated
+git add server.js // add a file which has been changed, ie server.js
+git commit -m "added new server.js" // commit a change
+git push // push changes to the repository
+git pull //pull down from github.com
+git log -p // checking the versions of a filegit log
+git log --oneline // checking commits
+
+
+git remote add todo-app https://github.com/jsoliv/todo-app.git
+
+
+
+
+
+
+
+…or create a new repository on the command line
+
+echo "# todo-app" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/jsoliv/todo-app.git
+git push -u origin master
+                
+
+…or push an existing repository from the command line
+
+git remote add origin https://github.com/jsoliv/todo-app.git
+git push -u origin master

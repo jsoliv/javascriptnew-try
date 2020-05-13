@@ -1,0 +1,3 @@
+express - https://www.youtube.com/watch?v=L72fhGm1tfE
+download html template from https://github.com/LearnWebCode/javascript/tree/master/01_Simple_App
+installing mongodb package: npm install mongodb
