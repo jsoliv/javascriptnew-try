@@ -83,8 +83,6 @@ app.post("/create-item", function(req, res){        // step 5 this a method to s
       res.send("Thanks for submitting the form")
       
       })
-
-    
     
 }) 
 
