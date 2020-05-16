@@ -2,6 +2,7 @@ let express =  require('express') // step 1 - create a variable to use Express
 let app = express() // step 2 calling Express
 let mongodb = require('mongodb') //step 10: requiring mongodb, so our code can work with it 
 let db // step 9: creating a variable that represents the mongodb connection
+app.use(express.static('public')) // step 12: making the contect of folder public available
 
 let connectionString = 'mongodb+srv://todoAppUser:tarsila@cluster0-bcdnw.mongodb.net/TodoApp?retryWrites=true' // this line could be inside mongodeb.connect, but we decided to keep it separete so our code gets easier to read
 mongodb.connect(connectionString, {useNewUrlParser: true, useUnifiedTopology: true}, function(err, client) {
@@ -55,6 +56,8 @@ res.send(`
     </ul>
     
   </div>
+<!-- step 11 -  to make this code more orginized we are using another file to handle the broser portion bellow, also we need to create a public folder --!> 
+  <script src="/browser.js"></script>
   
 </body>
 </html>`)
