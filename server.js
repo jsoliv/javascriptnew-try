@@ -10,7 +10,9 @@ mongodb.connect(connectionString, {useNewUrlParser: true, useUnifiedTopology: tr
     app.listen(3000) // step 4 telling what port the localhost, or the host, must be listening to, that means http://localhost:3000/em
 }) // connecting with mongodb 
 
+app.use(express.json()) // telling Expressto add froms from assincrynous request
 app.use(express.urlencoded({extended: false})) // telling Express to add all form values to the body value, and add that body object to the request object
+
 
 app.get('/', function(req, res){ // step 3 telling our APP what it should do when if it recives an incoming request to the the home pace url
     db.collection('items').find().toArray(function(err, items) {  // finding a document in mongodb and moving it to a Javascript arrray
@@ -20,7 +22,7 @@ res.send(`
     
 <!DOCTYPE html>
 <html>
-<head>
+<hea>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Simple To-Do App</title>
@@ -56,6 +58,12 @@ res.send(`
     </ul>
     
   </div>
+<-- below, we added the axios library, so we can leverage its features to create our code so we can send http request to our Javascript. More details at https://www.youtube.com/watch?v=qM4G1Ai2ZpE and 
+
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+ <!-- <script src="/axios/dist/axios.min.js"></script> --!>
+
+
 <!-- step 11 -  to make this code more orginized we are using another file to handle the broser portion bellow, also we need to create a public folder --!> 
   <script src="/browser.js"></script>
   
@@ -78,6 +86,12 @@ app.post("/create-item", function(req, res){        // step 5 this a method to s
 }) 
 
 
+app.post('/update-item', function (req, res) { //define portion to be received from the site, accoring to the code in brower.js
+  console.log(req.body.text) // 
+
+  res.send("Sucess")
+
+})
 
 
 
