@@ -10,7 +10,7 @@ mongodb.connect(connectionString, {useNewUrlParser: true, useUnifiedTopology: tr
     app.listen(3000) // step 4 telling what port the localhost, or the host, must be listening to, that means http://localhost:3000/em
 }) // connecting with mongodb 
 
-app.use(express.json()) // telling Expressto add froms from assincrynous request
+app.use(express.json()) // telling Express to add froms from assincrynous request
 app.use(express.urlencoded({extended: false})) // telling Express to add all form values to the body value, and add that body object to the request object
 
 
