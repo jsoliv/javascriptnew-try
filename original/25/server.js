@@ -6,7 +6,7 @@ let db
 
 app.use(express.static('public'))
 
-let connectionString = 'mongodb+srv://todoAppUser:tarsila@cluster0-bcdnw.mongodb.net/TodoApp?retryWrites=true'
+let connectionString = 'mongodb+srv://todoAppUser:VCq4hbWN6VyxKkEu@cluster0-m9cqf.mongodb.net/TodoApp?retryWrites=true'
 mongodb.connect(connectionString, {useNewUrlParser: true, useUnifiedTopology: true}, function(err, client) {
   db = client.db()
   app.listen(3000)
