@@ -12,7 +12,7 @@ app.use(express.static('public'))
 let connectionString = 'mongodb+srv://todoAppUser:tarsila@cluster0-bcdnw.mongodb.net/PhrasalVerbs?retryWrites=true'
 mongodb.connect(connectionString, {useNewUrlParser: true, useUnifiedTopology: true}, function(err, client) {
   db = client.db()
-  app.listen(3000)
+  app.listen(2500)
 })
 
 app.use(express.json())
